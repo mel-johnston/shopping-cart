@@ -3,7 +3,7 @@
 // State object keeps track of the application state (all available products and current state of the user's cart)
 const state = {
   allProducts: [],
-  cart: null,
+  cart: JSON.parse(localStorage.getItem('cart')) || [],
 };
 
 // Cart constructor.
@@ -15,7 +15,7 @@ const Cart = function (items) {
 Cart.prototype.addItem = function (product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
   this.items.push(new CartItem(product, quantity));
-  console.log(this.items);
+  this.saveToLocalStorage()
 };
 
 Cart.prototype.saveToLocalStorage = function () {
