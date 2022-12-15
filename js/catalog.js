@@ -39,18 +39,24 @@ function handleSubmit(event) {
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   let item = document.getElementById('items').value;
-  console.log(item);
 
   // TODO: get the quantity
-
   let quantity = document.getElementById('quantity').value;
-  console.log(quantity);
 
   // TODO: using those, add one item to the Cart
+  state.cart.addItem(items, quantity);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+function updateCounter() {
+  let calculateQuantity = 0;
+  const selectElement = document.getElementById('itemCount');
+  for (let i in state.cart.items) {
+    calculateQuantity += Number(state.cart.items[i].quantity);
+    console.log(state.cart.items[i].quantity);
+  }
+  selectElement.textContent = calculateQuantity
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
