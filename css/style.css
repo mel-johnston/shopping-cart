@@ -29,11 +29,33 @@ nav ul li {
   display: inline;
   font-size: 1.2rem;
   text-decoration: none;
+  transition: all .5s ease;
 }
 
 nav {
   padding-top: 15px;
 }
+
+nav a {
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  padding: 0 5px;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+nav a:hover {
+  font-size: 1.5rem;
+}
+
+nav span {
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  padding: 0 8px;
+  margin: 5px;
+  font-weight: bold;
+}
+
 
 
 /* MAIN */
