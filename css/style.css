@@ -1,1 +1,77 @@
 /* TODO: Make it awesome */
+
+:root {
+  --bg-color: rgba(224, 224, 224, 0.726);
+  --text-color: rgb(26, 26, 26);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0 auto;
+  width: 95%;
+}
+
+
+/* HEADER */
+
+header {
+
+  padding-top: 15px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+nav ul li {
+  display: inline;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+nav {
+  padding-top: 15px;
+}
+
+
+/* MAIN */
+
+main {
+  padding-top: 15px;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+}
+
+.copy {
+  padding: 20px;
+}
+
+fieldset {
+  border: solid 1px black;
+  padding: 15px;
+  display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+  /* border: solid 2px black; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
